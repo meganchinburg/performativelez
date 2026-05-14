@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500;600;700&family=Permanent+Marker&display=swap");
+
+html {
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: #fefaf6;
+  min-height: 100dvh;
+}
+
+/* Tap highlight for mobile */
+button,
+a {
+  -webkit-tap-highlight-color: rgba(226, 61, 128, 0.15);
+}
+
+/* Score bubble animation */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop 0.2s ease-out;
+}
+
+/* Podium glow */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(226, 61, 128, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(226, 61, 128, 0.6); }
+}
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
